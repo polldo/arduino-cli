@@ -61,7 +61,7 @@ func runInstallCommand(cmd *cobra.Command, args []string) {
 	inst := instance.CreateAndInit()
 	logrus.Info("Executing `arduino-cli core install`")
 
-	platformsRefs, err := arguments.ParseReferences(args, inst)
+	platformsRefs, err := arguments.ParseReferences(args)
 	if err != nil {
 		feedback.Errorf(tr("Invalid argument passed: %v"), err)
 		os.Exit(errorcodes.ErrBadArgument)

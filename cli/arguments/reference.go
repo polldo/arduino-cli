@@ -18,10 +18,6 @@ package arguments
 import (
 	"fmt"
 	"strings"
-
-	"github.com/arduino/arduino-cli/arduino/cores"
-	"github.com/arduino/arduino-cli/commands"
-	rpc "github.com/arduino/arduino-cli/rpc/cc/arduino/cli/commands/v1"
 )
 
 // Reference represents a reference item (core or library) passed to the CLI
@@ -41,10 +37,10 @@ func (r *Reference) String() string {
 
 // ParseReferences is a convenient wrapper that operates on a slice of strings and
 // calls ParseReference for each of them. It returns at the first invalid argument.
-func ParseReferences(args []string, inst *rpc.Instance) ([]*Reference, error) {
+func ParseReferences(args []string) ([]*Reference, error) {
 	ret := []*Reference{}
 	for _, arg := range args {
-		reference, err := ParseReference(arg, inst)
+		reference, err := ParseReference(arg)
 		if err != nil {
 			return nil, err
 		}
@@ -54,7 +50,7 @@ func ParseReferences(args []string, inst *rpc.Instance) ([]*Reference, error) {
 }
 
 // ParseReference parses a string and returns a Reference object.
-func ParseReference(arg string, inst *rpc.Instance) (*Reference, error) {
+func ParseReference(arg string) (*Reference, error) {
 	ret := &Reference{}
 	if arg == "" {
 		return nil, fmt.Errorf(tr("invalid empty core argument"))
@@ -79,31 +75,10 @@ func ParseReference(arg string, inst *rpc.Instance) (*Reference, error) {
 		return nil, fmt.Errorf(tr("invalid empty core name '%s'"), arg)
 	}
 	ret.PackageName = toks[0]
-
-	// try to search in the packages, this way ParseReference can be case insensitive
-	// note that if the search fail for some reason the ret.Packagename does not get overwritten
-	var targetPackage *cores.Package
-	if inst != nil { // do not perform the search if the instance is not defined
-		pm := commands.GetPackageManager(inst.Id)
-		for _, targetPackage = range pm.Packages {
-			if targetPackage.Name == strings.ToLower(ret.PackageName) {
-				ret.PackageName = targetPackage.Name
-				break
-			}
-		}
-	}
 	if toks[1] == "" {
 		return nil, fmt.Errorf(tr("invalid empty core architecture '%s'"), arg)
 	}
 	ret.Architecture = toks[1]
-	// we do the same for architecture
-	if inst != nil { // do not perform the search if the instance is not defined
-		for _, platform := range targetPackage.Platforms {
-			if platform.Architecture == strings.ToLower(ret.Architecture) {
-				ret.Architecture = platform.Architecture
-				break
-			}
-		}
-	}
+
 	return ret, nil
 }
