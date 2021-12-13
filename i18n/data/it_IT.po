@@ -43,7 +43,7 @@ msgstr ""
 msgid "%s already downloaded"
 msgstr ""
 
-#: commands/upload/upload.go:530
+#: commands/upload/upload.go:615
 msgid "%s and %s cannot be used together"
 msgstr ""
 
@@ -79,7 +79,7 @@ msgstr ""
 msgid "%s uninstalled"
 msgstr ""
 
-#: arduino/errors.go:674
+#: arduino/errors.go:707
 msgid "'%s' has an invalid signature"
 msgstr ""
 
@@ -107,7 +107,7 @@ msgstr ""
 msgid "A new release of Arduino CLI is available:"
 msgstr ""
 
-#: arduino/errors.go:210
+#: arduino/errors.go:243
 msgid "A programmer is required to upload"
 msgstr ""
 
@@ -245,7 +245,7 @@ msgstr ""
 msgid "Bootloader file specified but missing: {0}"
 msgstr ""
 
-#: cli/compile/compile.go:86
+#: cli/compile/compile.go:89
 msgid "Builds of 'core.a' are saved into this path to be cached and reused."
 msgstr ""
 
@@ -253,7 +253,7 @@ msgstr ""
 msgid "Can't create data directory %s"
 msgstr ""
 
-#: arduino/errors.go:380
+#: arduino/errors.go:413
 msgid "Can't create sketch"
 msgstr ""
 
@@ -267,7 +267,7 @@ msgstr "Non è possibile scaricare la libreria"
 msgid "Can't find dependencies for platform %s"
 msgstr ""
 
-#: arduino/errors.go:393
+#: arduino/errors.go:426
 msgid "Can't open sketch"
 msgstr ""
 
@@ -299,11 +299,11 @@ msgstr ""
 msgid "Cannot create config file: %v"
 msgstr ""
 
-#: arduino/errors.go:637
+#: arduino/errors.go:670
 msgid "Cannot create temp dir"
 msgstr ""
 
-#: arduino/errors.go:655
+#: arduino/errors.go:688
 msgid "Cannot create temp file"
 msgstr ""
 
@@ -331,7 +331,7 @@ msgstr ""
 msgid "Cannot install tool %s"
 msgstr ""
 
-#: commands/upload/upload.go:421
+#: commands/upload/upload.go:506
 msgid "Cannot perform port reset: %s"
 msgstr ""
 
@@ -367,7 +367,7 @@ msgstr ""
 msgid "Clean caches."
 msgstr ""
 
-#: cli/cli.go:124
+#: cli/cli.go:125
 msgid "Comma-separated list of additional URLs for the Boards Manager."
 msgstr ""
 
@@ -377,11 +377,11 @@ msgid ""
 "a change."
 msgstr ""
 
-#: commands/debug/debug_info.go:119 commands/upload/upload.go:359
+#: commands/debug/debug_info.go:119 commands/upload/upload.go:444
 msgid "Compiled sketch not found in %s"
 msgstr ""
 
-#: cli/compile/compile.go:72 cli/compile/compile.go:73
+#: cli/compile/compile.go:75 cli/compile/compile.go:76
 msgid "Compiles Arduino sketches."
 msgstr ""
 
@@ -480,6 +480,10 @@ msgstr ""
 msgid "DEPRECATED"
 msgstr ""
 
+#: cli/daemon/daemon.go:174
+msgid "Daemon is now listening on %s:%s"
+msgstr ""
+
 #: cli/debug/debug.go:52
 msgid "Debug Arduino sketches."
 msgstr ""
@@ -562,7 +566,7 @@ msgstr ""
 msgid "Disconnected"
 msgstr ""
 
-#: cli/daemon/daemon.go:65
+#: cli/daemon/daemon.go:66
 msgid "Display only the provided gRPC calls"
 msgstr ""
 
@@ -574,7 +578,7 @@ msgstr ""
 msgid "Do not perform the actual upload, just log out actions"
 msgstr ""
 
-#: cli/daemon/daemon.go:63
+#: cli/daemon/daemon.go:64
 msgid "Do not terminate daemon process if the parent process dies"
 msgstr ""
 
@@ -599,7 +603,7 @@ msgstr ""
 msgid "Downloads one or more libraries without installing them."
 msgstr ""
 
-#: cli/daemon/daemon.go:64
+#: cli/daemon/daemon.go:65
 msgid "Enable debug logging of gRPC calls"
 msgstr ""
 
@@ -699,18 +703,22 @@ msgstr ""
 msgid "Error during Debug: %v"
 msgstr ""
 
-#: cli/feedback/feedback.go:144
+#: cli/compile/compile.go:170
+msgid "Error during FQBN detection: %v"
+msgstr ""
+
+#: cli/feedback/feedback.go:153
 msgid "Error during JSON encoding of the output: %v"
 msgstr ""
 
 #: cli/burnbootloader/burnbootloader.go:73
-#: cli/burnbootloader/burnbootloader.go:86 cli/compile/compile.go:195
-#: cli/compile/compile.go:227 cli/upload/upload.go:88 cli/upload/upload.go:94
-#: cli/upload/upload.go:110 cli/upload/upload.go:137
+#: cli/burnbootloader/burnbootloader.go:86 cli/compile/compile.go:222
+#: cli/compile/compile.go:254 cli/upload/upload.go:88 cli/upload/upload.go:94
+#: cli/upload/upload.go:111 cli/upload/upload.go:138
 msgid "Error during Upload: %v"
 msgstr ""
 
-#: cli/compile/compile.go:239
+#: cli/compile/compile.go:266
 msgid "Error during build: %v"
 msgstr ""
 
@@ -730,7 +738,7 @@ msgstr ""
 msgid "Error extracting library_index.json.gz"
 msgstr ""
 
-#: commands/upload/upload.go:356
+#: commands/upload/upload.go:441
 msgid "Error finding build artifacts"
 msgstr ""
 
@@ -811,7 +819,7 @@ msgstr ""
 msgid "Error listing platforms: %v"
 msgstr ""
 
-#: cli/compile/compile.go:140
+#: cli/compile/compile.go:143
 msgid "Error opening source code overrides data file: %v"
 msgstr ""
 
@@ -948,7 +956,7 @@ msgstr ""
 msgid "Error: command description is not supported by %v"
 msgstr ""
 
-#: cli/compile/compile.go:147
+#: cli/compile/compile.go:150
 msgid "Error: invalid source code overrides data file: %v"
 msgstr ""
 
@@ -968,7 +976,7 @@ msgstr "Esempi:"
 msgid "Executable to debug"
 msgstr ""
 
-#: commands/debug/debug_info.go:122 commands/upload/upload.go:362
+#: commands/debug/debug_info.go:122 commands/upload/upload.go:447
 msgid "Expected compiled sketch in directory %s, but is a file instead"
 msgstr ""
 
@@ -981,15 +989,19 @@ msgstr ""
 msgid "FQBN:"
 msgstr ""
 
-#: commands/upload/upload.go:451
+#: commands/upload/upload.go:536
 msgid "Failed chip erase"
 msgstr ""
 
-#: commands/upload/upload.go:458
+#: cli/daemon/daemon.go:148
+msgid "Failed choosing port, address: %s"
+msgstr ""
+
+#: commands/upload/upload.go:543
 msgid "Failed programming"
 msgstr ""
 
-#: commands/upload/upload.go:454
+#: commands/upload/upload.go:539
 msgid "Failed to burn bootloader"
 msgstr ""
 
@@ -1001,19 +1013,19 @@ msgstr ""
 msgid "Failed to create downloads directory"
 msgstr ""
 
-#: cli/daemon/daemon.go:126
+#: cli/daemon/daemon.go:127
 msgid "Failed to listen on TCP port: %[1]s. %[2]s is an invalid port."
 msgstr ""
 
-#: cli/daemon/daemon.go:120
+#: cli/daemon/daemon.go:121
 msgid "Failed to listen on TCP port: %[1]s. %[2]s is unknown name."
 msgstr ""
 
-#: cli/daemon/daemon.go:135
+#: cli/daemon/daemon.go:136
 msgid "Failed to listen on TCP port: %[1]s. Unexpected error: %[2]v"
 msgstr ""
 
-#: cli/daemon/daemon.go:132
+#: cli/daemon/daemon.go:133
 msgid "Failed to listen on TCP port: %s. Address already in use."
 msgstr ""
 
@@ -1021,7 +1033,7 @@ msgstr ""
 msgid "Failed to read: {0}"
 msgstr ""
 
-#: commands/upload/upload.go:462
+#: commands/upload/upload.go:547
 msgid "Failed uploading"
 msgstr ""
 
@@ -1106,7 +1118,7 @@ msgstr ""
 msgid "Identification properties:"
 msgstr ""
 
-#: cli/compile/compile.go:113
+#: cli/compile/compile.go:116
 msgid "If set built binaries will be exported to the sketch folder."
 msgstr ""
 
@@ -1158,11 +1170,11 @@ msgstr ""
 msgid "Internal error in cache"
 msgstr ""
 
-#: arduino/errors.go:266
+#: arduino/errors.go:299
 msgid "Invalid '%[1]s' property: %[2]s"
 msgstr ""
 
-#: cli/cli.go:265
+#: cli/cli.go:267
 msgid ""
 "Invalid Call : should show Help, but it is available only in TEXT mode."
 msgstr ""
@@ -1171,11 +1183,11 @@ msgstr ""
 msgid "Invalid Device URL format"
 msgstr ""
 
-#: arduino/errors.go:60
+#: arduino/errors.go:61
 msgid "Invalid FQBN"
 msgstr ""
 
-#: arduino/errors.go:78
+#: arduino/errors.go:79
 msgid "Invalid URL"
 msgstr ""
 
@@ -1200,7 +1212,7 @@ msgstr ""
 msgid "Invalid eeprom size regexp: %s"
 msgstr ""
 
-#: arduino/errors.go:46
+#: arduino/errors.go:47
 msgid "Invalid instance"
 msgstr ""
 
@@ -1208,7 +1220,7 @@ msgstr ""
 msgid "Invalid item %s"
 msgstr ""
 
-#: arduino/errors.go:96
+#: arduino/errors.go:97
 msgid "Invalid library"
 msgstr ""
 
@@ -1216,11 +1228,11 @@ msgstr ""
 msgid "Invalid network.proxy '%[1]s': %[2]s"
 msgstr ""
 
-#: cli/cli.go:226
+#: cli/cli.go:228
 msgid "Invalid option for --log-level: %s"
 msgstr ""
 
-#: cli/cli.go:243
+#: cli/cli.go:245
 msgid "Invalid output format: %s"
 msgstr ""
 
@@ -1244,7 +1256,7 @@ msgstr ""
 msgid "Invalid size regexp: %s"
 msgstr ""
 
-#: arduino/errors.go:114
+#: arduino/errors.go:115
 msgid "Invalid version"
 msgstr ""
 
@@ -1252,7 +1264,7 @@ msgstr ""
 msgid "Invalid vid value: '%s'"
 msgstr ""
 
-#: cli/compile/compile.go:108
+#: cli/compile/compile.go:111
 msgid ""
 "Just produce the compilation database, without actually compiling. All build"
 " commands are skipped except pre* hooks."
@@ -1279,7 +1291,7 @@ msgstr ""
 msgid "Library %s is not installed"
 msgstr ""
 
-#: arduino/errors.go:314
+#: arduino/errors.go:347
 msgid "Library '%s' not found"
 msgstr ""
 
@@ -1287,7 +1299,7 @@ msgstr ""
 msgid "Library can't use both '%[1]s' and '%[2]s' folders. Double check {0}"
 msgstr ""
 
-#: arduino/errors.go:430
+#: arduino/errors.go:463
 msgid "Library install failed"
 msgstr ""
 
@@ -1325,19 +1337,19 @@ msgstr ""
 msgid "List connected boards."
 msgstr ""
 
-#: cli/compile/compile.go:91
+#: cli/compile/compile.go:94
 msgid ""
 "List of custom build properties separated by commas. Or can be used multiple"
 " times for multiple properties."
 msgstr ""
 
-#: cli/compile/compile.go:105
+#: cli/compile/compile.go:108
 msgid ""
 "List of custom libraries dir paths separated by commas. Or can be used "
 "multiple times for multiple libraries dir paths."
 msgstr ""
 
-#: cli/compile/compile.go:103
+#: cli/compile/compile.go:106
 msgid ""
 "List of paths to libraries root folders. Libraries set this way have top "
 "priority in case of conflicts. Can be used multiple times for different "
@@ -1398,19 +1410,19 @@ msgstr ""
 msgid "Missing '{0}' from library in {1}"
 msgstr ""
 
-#: arduino/errors.go:130
+#: arduino/errors.go:151
 msgid "Missing FQBN (Fully Qualified Board Name)"
 msgstr ""
 
-#: arduino/errors.go:172
+#: arduino/errors.go:205
 msgid "Missing port"
 msgstr ""
 
-#: arduino/errors.go:160
+#: arduino/errors.go:181 arduino/errors.go:193
 msgid "Missing port protocol"
 msgstr ""
 
-#: arduino/errors.go:198
+#: arduino/errors.go:231
 msgid "Missing programmer"
 msgstr ""
 
@@ -1418,11 +1430,11 @@ msgstr ""
 msgid "Missing size regexp"
 msgstr ""
 
-#: arduino/errors.go:366
+#: arduino/errors.go:399
 msgid "Missing sketch path"
 msgstr ""
 
-#: arduino/errors.go:247
+#: arduino/errors.go:280
 msgid "Monitor '%s' not found"
 msgstr ""
 
@@ -1474,7 +1486,7 @@ msgid ""
 "Did you mean...\n"
 msgstr ""
 
-#: arduino/errors.go:186
+#: arduino/errors.go:219
 msgid "No monitor available for the port protocol %s"
 msgstr ""
 
@@ -1490,11 +1502,11 @@ msgstr ""
 msgid "No updates available."
 msgstr ""
 
-#: commands/upload/upload.go:411
+#: commands/upload/upload.go:496
 msgid "No upload port found, using %s as fallback"
 msgstr ""
 
-#: arduino/errors.go:333
+#: arduino/errors.go:366
 msgid "No valid dependencies solution found"
 msgstr ""
 
@@ -1532,29 +1544,29 @@ msgstr ""
 msgid "Option:"
 msgstr ""
 
-#: cli/compile/compile.go:95
+#: cli/compile/compile.go:98
 msgid ""
 "Optional, can be: %s. Used to tell gcc which warning level to use (-W flag)."
 msgstr ""
 
-#: cli/compile/compile.go:109
+#: cli/compile/compile.go:112
 msgid "Optional, cleanup the build folder and do not use any cached build."
 msgstr ""
 
-#: cli/compile/compile.go:106
+#: cli/compile/compile.go:109
 msgid ""
 "Optional, optimize compile output for debugging, rather than for release."
 msgstr ""
 
-#: cli/compile/compile.go:97
+#: cli/compile/compile.go:100
 msgid "Optional, suppresses almost every output."
 msgstr ""
 
-#: cli/compile/compile.go:96 cli/upload/upload.go:65
+#: cli/compile/compile.go:99 cli/upload/upload.go:65
 msgid "Optional, turns on verbose mode."
 msgstr ""
 
-#: cli/compile/compile.go:114
+#: cli/compile/compile.go:117
 msgid ""
 "Optional. Path to a .json file that contains a set of replacements of the "
 "sketch source code."
@@ -1564,7 +1576,7 @@ msgstr ""
 msgid "OutputRate in Null monitor must be a float64"
 msgstr ""
 
-#: cli/compile/compile.go:93
+#: cli/compile/compile.go:96
 msgid ""
 "Override a build property with a custom value. Can be used multiple times "
 "for multiple properties."
@@ -1607,13 +1619,13 @@ msgstr ""
 msgid "Path to the file where logs will be written."
 msgstr ""
 
-#: cli/compile/compile.go:89
+#: cli/compile/compile.go:92
 msgid ""
 "Path where to save compiled files. If omitted, a directory will be created "
 "in the default temporary path of your OS."
 msgstr ""
 
-#: commands/upload/upload.go:392
+#: commands/upload/upload.go:477
 msgid "Performing 1200-bps touch reset on serial port %s"
 msgstr ""
 
@@ -1629,11 +1641,11 @@ msgstr ""
 msgid "Platform %s uninstalled"
 msgstr ""
 
-#: arduino/errors.go:351
+#: arduino/errors.go:384
 msgid "Platform '%s' is already at the latest version"
 msgstr ""
 
-#: arduino/errors.go:295
+#: arduino/errors.go:328
 msgid "Platform '%s' not found"
 msgstr ""
 
@@ -1669,6 +1681,12 @@ msgstr ""
 msgid "Platform size (bytes):"
 msgstr ""
 
+#: arduino/errors.go:135
+msgid ""
+"Please specify an FQBN. Multiple possible ports detected on port %s with "
+"protocol %s"
+msgstr ""
+
 #: cli/board/list.go:88 cli/board/list.go:126
 msgid "Port"
 msgstr ""
@@ -1677,7 +1695,7 @@ msgstr ""
 msgid "Port closed:"
 msgstr ""
 
-#: arduino/errors.go:524
+#: arduino/errors.go:557
 msgid "Port monitor error"
 msgstr ""
 
@@ -1690,7 +1708,7 @@ msgstr ""
 msgid "Print details about a board."
 msgstr ""
 
-#: cli/compile/compile.go:85
+#: cli/compile/compile.go:88
 msgid "Print preprocessed code to stdout instead of compiling."
 msgstr ""
 
@@ -1706,7 +1724,7 @@ msgstr ""
 msgid "Prints the current configuration."
 msgstr ""
 
-#: arduino/errors.go:228
+#: arduino/errors.go:261
 msgid "Programmer '%s' not found"
 msgstr ""
 
@@ -1726,7 +1744,7 @@ msgstr ""
 msgid "Progress {0}"
 msgstr ""
 
-#: arduino/errors.go:280
+#: arduino/errors.go:313
 msgid "Property '%s' is undefined"
 msgstr ""
 
@@ -1750,7 +1768,7 @@ msgstr ""
 msgid "Required tool:"
 msgstr ""
 
-#: cli/daemon/daemon.go:55
+#: cli/daemon/daemon.go:56
 msgid "Run as a daemon on port: %s"
 msgstr ""
 
@@ -1758,7 +1776,7 @@ msgstr ""
 msgid "Run in silent mode, show only monitor input and output."
 msgstr ""
 
-#: cli/daemon/daemon.go:56
+#: cli/daemon/daemon.go:57
 msgid ""
 "Running as a daemon the initialization of cores and libraries is done only "
 "once."
@@ -1772,7 +1790,7 @@ msgstr ""
 msgid "Running recipe: {0}"
 msgstr ""
 
-#: cli/compile/compile.go:87
+#: cli/compile/compile.go:90
 msgid "Save build artifacts in this directory."
 msgstr ""
 
@@ -1824,7 +1842,7 @@ msgstr ""
 msgid "Show all available core versions."
 msgstr ""
 
-#: cli/compile/compile.go:84
+#: cli/compile/compile.go:87
 msgid "Show all build properties used instead of compiling."
 msgstr ""
 
@@ -1933,7 +1951,7 @@ msgstr ""
 msgid "Skip linking of final executable."
 msgstr ""
 
-#: commands/upload/upload.go:385
+#: commands/upload/upload.go:470
 msgid "Skipping 1200-bps touch reset: no serial port selected!"
 msgstr ""
 
@@ -1965,11 +1983,11 @@ msgstr ""
 msgid "TOUCH: error during reset: %s"
 msgstr ""
 
-#: cli/daemon/daemon.go:61
+#: cli/daemon/daemon.go:62
 msgid "The TCP port the daemon will listen to"
 msgstr ""
 
-#: cli/cli.go:123
+#: cli/cli.go:124
 msgid "The custom config file (if not specified the default will be used)."
 msgstr ""
 
@@ -1985,7 +2003,7 @@ msgid ""
 "Maybe use '%[2]s'?"
 msgstr ""
 
-#: cli/cli.go:115 cli/cli.go:119
+#: cli/cli.go:115 cli/cli.go:120
 msgid "The output format for the logs, can be: %s"
 msgstr ""
 
@@ -2068,7 +2086,7 @@ msgstr ""
 msgid "Unable to get user home dir: %v"
 msgstr ""
 
-#: cli/cli.go:212
+#: cli/cli.go:214
 msgid "Unable to open file for logging: %s"
 msgstr ""
 
@@ -2098,7 +2116,7 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
-#: arduino/errors.go:144
+#: arduino/errors.go:165
 msgid "Unknown FQBN"
 msgstr ""
 
@@ -2180,7 +2198,7 @@ msgstr ""
 msgid "Upload port address, e.g.: COM3 or /dev/ttyACM2"
 msgstr ""
 
-#: commands/upload/upload.go:409
+#: commands/upload/upload.go:494
 msgid "Upload port found on %s"
 msgstr ""
 
@@ -2188,7 +2206,7 @@ msgstr ""
 msgid "Upload port protocol, e.g: serial"
 msgstr ""
 
-#: cli/compile/compile.go:98
+#: cli/compile/compile.go:101
 msgid "Upload the binary after the compilation."
 msgstr ""
 
@@ -2200,7 +2218,7 @@ msgstr ""
 msgid "Upload the bootloader."
 msgstr ""
 
-#: cli/compile/compile.go:201 cli/upload/upload.go:116
+#: cli/compile/compile.go:228 cli/upload/upload.go:117
 msgid ""
 "Uploading to specified board using %s protocol requires the following info:"
 msgstr ""
@@ -2270,7 +2288,7 @@ msgstr ""
 msgid "Values"
 msgstr ""
 
-#: cli/burnbootloader/burnbootloader.go:57 cli/compile/compile.go:100
+#: cli/burnbootloader/burnbootloader.go:57 cli/compile/compile.go:103
 #: cli/upload/upload.go:64
 msgid "Verify uploaded binary after the upload."
 msgstr ""
@@ -2297,7 +2315,7 @@ msgid ""
 "incompatible with your current board which runs on {2} architecture(s)."
 msgstr ""
 
-#: commands/upload/upload.go:398
+#: commands/upload/upload.go:483
 msgid "Waiting for upload port..."
 msgstr ""
 
@@ -2312,7 +2330,7 @@ msgid ""
 " converted to {2}. Consider upgrading this core."
 msgstr ""
 
-#: commands/upload/upload.go:294
+#: commands/upload/upload.go:379
 msgid ""
 "Warning: tool '%s' is not installed. It might not be available for your OS."
 msgstr ""
@@ -2321,7 +2339,7 @@ msgstr ""
 msgid "Website: %s"
 msgstr ""
 
-#: cli/compile/compile.go:101
+#: cli/compile/compile.go:104
 msgid ""
 "When specified, VID/PID specific build properties are used, if board "
 "supports them."
@@ -2361,11 +2379,11 @@ msgstr ""
 msgid "arduino-preprocessor pattern is missing"
 msgstr ""
 
-#: commands/upload/upload.go:555
+#: commands/upload/upload.go:640
 msgid "autodetect build artifact: %s"
 msgstr ""
 
-#: commands/upload/upload.go:540
+#: commands/upload/upload.go:625
 msgid "binary file not found in %s"
 msgstr ""
 
@@ -2415,7 +2433,7 @@ msgstr ""
 msgid "candidates"
 msgstr ""
 
-#: commands/upload/upload.go:497 commands/upload/upload.go:504
+#: commands/upload/upload.go:582 commands/upload/upload.go:589
 msgid "cannot execute upload tool: %s"
 msgstr ""
 
@@ -2474,7 +2492,7 @@ msgstr ""
 msgid "computing hash: %s"
 msgstr ""
 
-#: commands/upload/upload.go:612
+#: commands/upload/upload.go:697
 msgid "could not find a valid build artifact"
 msgstr ""
 
@@ -2776,7 +2794,7 @@ msgstr ""
 msgid "invalid port configuration: %s"
 msgstr ""
 
-#: commands/upload/upload.go:484
+#: commands/upload/upload.go:569
 msgid "invalid recipe '%[1]s': %[2]s"
 msgstr ""
 
@@ -2895,7 +2913,7 @@ msgstr ""
 msgid "moving extracted archive to destination dir: %s"
 msgstr ""
 
-#: commands/upload/upload.go:607
+#: commands/upload/upload.go:692
 msgid "multiple build artifacts found: '%[1]s' and '%[2]s'"
 msgstr ""
 
@@ -2915,7 +2933,7 @@ msgstr ""
 msgid "no instance specified"
 msgstr ""
 
-#: commands/upload/upload.go:562
+#: commands/upload/upload.go:647
 msgid "no sketch or build directory/file specified"
 msgstr ""
 
@@ -2923,7 +2941,7 @@ msgstr ""
 msgid "no unique root dir in archive, found '%[1]s' and '%[2]s'"
 msgstr ""
 
-#: commands/upload/upload.go:479
+#: commands/upload/upload.go:564
 msgid "no upload port provided"
 msgstr ""
 
@@ -3003,7 +3021,7 @@ msgstr ""
 msgid "platform not installed"
 msgstr ""
 
-#: cli/compile/compile.go:119
+#: cli/compile/compile.go:122
 msgid "please use --build-property instead."
 msgstr ""
 
@@ -3089,7 +3107,7 @@ msgstr ""
 msgid "reading sketch metadata %[1]s: %[2]s"
 msgstr ""
 
-#: commands/upload/upload.go:473
+#: commands/upload/upload.go:558
 msgid "recipe not found '%s'"
 msgstr ""
 
@@ -3318,7 +3336,7 @@ msgstr ""
 msgid "upgrade everything to the latest version"
 msgstr ""
 
-#: commands/upload/upload.go:508
+#: commands/upload/upload.go:593
 msgid "uploading error: %s"
 msgstr ""
 
