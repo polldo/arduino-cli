@@ -4,15 +4,16 @@ Here you can find a list of migration guides to handle breaking changes between 
 
 ## Unreleased
 
-### `ParseReferences() function change in `arduino-cli` package
+### `ParseReferences() function change in`arduino-cli` package
 
 The `parseArch` parameter was removed since it was unused and was always true. This means that the architecture gets
 always parsed by the function.
 
-### `ParseReference() function change in `arduino-cli` package
+### `ParseReference() function change in`arduino-cli` package
 
 The `parseArch` parameter was removed since it was unused and was always true. This means that the architecture gets
-always parsed by the function.
+always parsed by the function. Furthermore the function now should also correctly interpret `packager:arch` spelled with
+the wrong casing.
 
 ## 0.20.0
 
